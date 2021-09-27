@@ -6,7 +6,7 @@ from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.model_selection import train_test_split, validation_curve, learning_curve, GridSearchCV
 from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import MinMaxScaler
-
+## data input
 data = pd.read_csv('data/winequality-white.csv', sep=';')
 X = data.iloc[:, :-1]
 y = data.iloc[:, -1]
@@ -56,8 +56,8 @@ plt.savefig('NerualNetwork_validation_curve_lambda.jpg')
 
 # Hyperparameter tuning
 alpha_range = np.logspace(-1, 2, 5)
-learning_range = np.logspace(-5, 0, 6)
-tuned_params = {'alpha' : alpha_range, 'learning_rate_init' : learning_range}
+lambda_range = np.logspace(-5, 0, 6)
+tuned_params = {'alpha' : alpha_range, 'learning_rate_init' : lambda_range}
 
 cnn_best = GridSearchCV(c_nn, param_grid=tuned_params, cv=5, n_jobs=4)
 cnn_best.fit(X_train,y_train)
@@ -77,7 +77,7 @@ plt.figure()
 plt.plot(train_sizes, np.mean(train_scores, axis=1), 'o-', label='Training')
 plt.plot(train_sizes, np.mean(test_scores, axis=1), 'o-', label='Testing')
 plt.title('Learning curve for kNN')
-plt.xlabel('Fraction of training examples')
+plt.xlabel('Training samples')
 plt.ylabel("Classification score")
 plt.legend(loc="best")
 plt.grid()

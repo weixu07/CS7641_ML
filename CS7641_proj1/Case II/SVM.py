@@ -2,11 +2,11 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.model_selection import train_test_split, validation_curve, learning_curve
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.svm import SVC
-
+## data input
 data = pd.read_csv('data/winequality-white.csv', sep=';')
 X = data.iloc[:, :-1]
 y = data.iloc[:, -1]
@@ -80,7 +80,7 @@ plt.figure()
 plt.plot(train_sizes, np.mean(train_scores, axis=1), 'o-', label='Training')
 plt.plot(train_sizes, np.mean(test_scores, axis=1), 'o-', label='Testing')
 plt.title('Learning curve for SVM')
-plt.xlabel('Fraction of training examples')
+plt.xlabel('Training samples')
 plt.ylabel("Classification score")
 plt.legend(loc="best")
 plt.grid()

@@ -7,7 +7,7 @@ README.txt
 ..\Case I\data\loan_data.CSV
 ..\Case II\data\winequality-white.CSV
 
-2. The programming is used by Python. Each algorithm as Decison Trees, Neural Networks, Boosting, Support Vector Machines, and k-Nearest Neighbors is implemented in an indepdent .py file  
+2. The programming is used by Python. Each algorithm as Decision Trees, Neural Networks, Boosting, Support Vector Machines, and k-Nearest Neighbors is implemented in an indepdent .py file  
 
 3. The python files and datasets can be downloaded using the following git command:
 git clone https://github.com/weixu07/CS7641_ML.git
@@ -16,6 +16,18 @@ git clone https://github.com/weixu07/CS7641_ML.git
 
 5. Run corresponding python file named as algorithm name. Such as 
 python SVM.py
+
+Libray: sklearn
+
+Decision Trees: DecisionTreeClassifier
+Neural Networks: MLPClassifier
+Boosting: AdaBoostClassifier
+Support Vector Machines: SVC
+k-Nearest Neighbors: KNeighborsClassifier
+
+
+
+
 
 
   

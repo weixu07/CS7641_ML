@@ -2,17 +2,14 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-import seaborn as sns
 from sklearn.model_selection import train_test_split, validation_curve, learning_curve
-from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.preprocessing import MinMaxScaler
 
 from sklearn.tree import DecisionTreeClassifier
 from sklearn import tree
 
 from sklearn.model_selection import GridSearchCV
-
-
 
 ## data input
 loan = pd.read_csv('data/loan_data.csv')
@@ -73,7 +70,7 @@ plt.figure()
 plt.plot(train_sizes, np.mean(train_scores, axis=1), 'o-', label='Training')
 plt.plot(train_sizes, np.mean(test_scores, axis=1), 'o-', label='Testing')
 plt.title('Learning curve for decision tree')
-plt.xlabel('Fraction of training examples')
+plt.xlabel('Training samples')
 plt.ylabel("Classification score")
 plt.legend(loc="best")
 plt.grid()
