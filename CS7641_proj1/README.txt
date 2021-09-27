@@ -9,7 +9,16 @@ README.txt
 
 2. The programming is used by Python. Each algorithm as Decison Trees, Neural Networks, Boosting, Support Vector Machines, and k-Nearest Neighbors is implemented in an indepdent .py file  
 
-3. 
+3. The python files and datasets can be downloaded using the following git command:
+git clone https://github.com/weixu07/CS7641_ML.git
+
+4. To run any algorithm on any dataset, please go to corresponding folder such as CaseI or CaseII. 
+
+5. Run corresponding python file named as algorithm name. Such as 
+python SVM.py
+
+
+  
 
 
 
