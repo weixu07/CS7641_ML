@@ -2,6 +2,9 @@
 
 git clone https://github.com/weixu07/CS7641_ML.git
 
+direct to \CS7641_proj2
+
+
 Part 1 The Problems You Give Us
 
 Package needed: ABAGAIL https://github.com/pushkar/ABAGAIL
